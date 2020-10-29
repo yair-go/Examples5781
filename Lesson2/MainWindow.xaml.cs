@@ -20,18 +20,32 @@ namespace Lesson2
     /// </summary>
     public partial class MainWindow : Window
     {
+        Student[] students;
         public MainWindow()
         {
+            Random rand = new Random();
+            students = new Student[10];
+
+            for (int i = 0; i < students.Length; i++)
+            {
+                students[i] = new Student("Yossi", rand.Next(1980, 2000));
+            }
+
             InitializeComponent();
         }
 
         private void pb_Console_Click(object sender, RoutedEventArgs e)
         {
+            tb_Console.Text = "";
             Person p = new Person("Moshe");
             p.Birthday = new DateTime(1980, 1, 1);
 
-            //tb_Console.Text = $"Hello {p.Name} You are {p.Age} years old" ;
-            tb_Console.Text = $"Hello {p}";
+            foreach (Student st in students)
+            {
+                tb_Console.Text += $"Hello {st}";
+            }
+           
+
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson2
 {
-    class Person
+    class Person : IComparable
     {
         #region Fields
         private string name;
@@ -34,13 +34,18 @@ namespace Lesson2
         public string Name { get => name; set => name = value; }
         public DateTime Birthday { get => birthday; set => birthday = value; }
         public int Id { get => id;  }
+
+        public int CompareTo(object obj)
+        {
+            return Age.CompareTo((obj as Person).Age);
+        }
         #endregion
 
         #region Methods
 
         public override string ToString()
         {
-            return $"{Name} {Age}";
+            return $"{Name} you are {Age} years old\n";
         }
         #endregion
     }
