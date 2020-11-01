@@ -45,7 +45,7 @@ namespace Lesson2
 
         public override string ToString()
         {
-            return $"{Name} you are {Age} years old\n";
+            return $"{Name} you are {Age} years old";
         }
         #endregion
     }

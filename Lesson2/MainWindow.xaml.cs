@@ -40,9 +40,14 @@ namespace Lesson2
             Person p = new Person("Moshe");
             p.Birthday = new DateTime(1980, 1, 1);
 
+            students.Clone();
+            students.First()
+            
+            Array.Sort(students);
+
             foreach (Student st in students)
             {
-                tb_Console.Text += $"Hello {st}";
+                tb_Console.Text += $"Hello {st}\n";
             }
            
 
