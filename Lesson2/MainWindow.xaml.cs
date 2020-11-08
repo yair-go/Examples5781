@@ -41,7 +41,7 @@ namespace Lesson2
             p.Birthday = new DateTime(1980, 1, 1);
 
             students.Clone();
-            students.First()
+           
             
             Array.Sort(students);
 

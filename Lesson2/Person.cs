@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson2
 {
-    class Person : IComparable
+    public class Person : IComparable
     {
         #region Fields
         private string name;

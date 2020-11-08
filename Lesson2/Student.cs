@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson2
 {
-    class Student : Person, IComparable
+    public class Student : Person, IComparable
     {
         private int average;
         static Random rand = new Random();
