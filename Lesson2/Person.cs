@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Lesson2
 {
-    public class Person : IComparable
+    public class Person : IComparable, INotifyPropertyChanged
     {
         #region Fields
         private string name;
@@ -14,6 +15,8 @@ namespace Lesson2
         private int id;
 
         #endregion
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         #region Ctors
         public Person(string name = "", int year = 1970, int month = 1, int day = 1, int id = 1)
@@ -31,7 +34,18 @@ namespace Lesson2
             get { return DateTime.Now.Year - Birthday.Year; }
         }
 
-        public string Name { get => name; set => name = value; }
+        public string Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+                }
+            }
+        }
         public DateTime Birthday { get => birthday; set => birthday = value; }
         public int Id { get => id;  }
 

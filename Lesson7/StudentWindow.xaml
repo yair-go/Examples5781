@@ -27,7 +27,7 @@
             <Label VerticalAlignment="Center" Grid.Row="0" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Age:"/>
             <TextBox x:Name="ageTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Age, Mode=OneWay}" Grid.Row="0" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Grid.Row="1" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Average:"/>
-            <TextBox x:Name="averageTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Average, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <TextBox x:Name="averageTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Average, Mode=OneWay}" Grid.Row="1" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Birthday:"/>
             <DatePicker x:Name="birthdayDatePicker" VerticalAlignment="Center" SelectedDate="{Binding Birthday, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="1"/>
             <Label VerticalAlignment="Center" Grid.Row="3" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Id:"/>
@@ -35,6 +35,7 @@
             <Label VerticalAlignment="Center" Grid.Row="4" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Name:"/>
             <TextBox x:Name="nameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
         </Grid>
+        <TextBox x:Name="textColor" HorizontalAlignment="Left" Height="23" Margin="172,241,0,0" TextWrapping="Wrap" Text="yellow" VerticalAlignment="Top" Width="120" Background="{Binding Text, ElementName=textColor}"/>
 
     </Grid>
 </Window>
