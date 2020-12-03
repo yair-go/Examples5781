@@ -38,7 +38,8 @@ namespace Lesson7
 
         private void pbUpdateName_Click(object sender, RoutedEventArgs e)
         {
-            this.student.Name = "Avraham";
+            this.student.Name = "Yisrael";
+            this.student.Birthday = new DateTime(2000, 1, 1);
         }
     }
 }

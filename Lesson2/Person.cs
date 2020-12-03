@@ -46,7 +46,18 @@ namespace Lesson2
                 }
             }
         }
-        public DateTime Birthday { get => birthday; set => birthday = value; }
+        public DateTime Birthday 
+        { 
+            get => birthday;
+            set
+            {
+                birthday = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Birthday"));
+                }
+            }
+        }
         public int Id { get => id;  }
 
         public int CompareTo(object obj)

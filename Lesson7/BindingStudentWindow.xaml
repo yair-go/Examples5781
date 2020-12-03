@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="BindingStudentWindow" Height="450" Width="800">
     <Grid x:Name="studentGrid">
-        <TextBlock HorizontalAlignment="Left" Margin="78,132,0,0" TextWrapping="Wrap" Text="Student Name:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="78,132,0,0" TextWrapping="Wrap" Text="Student Name :" VerticalAlignment="Top"/>
         <TextBox x:Name="tbStudentName" HorizontalAlignment="Left" Height="23" Margin="78,174,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="pbUpdateName" Content="Update Name" HorizontalAlignment="Left" Margin="289,276,0,0" VerticalAlignment="Top" Width="90" Click="pbUpdateName_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="278,132,0,0" TextWrapping="Wrap" Text="Student Birthday :" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbStudentAge" HorizontalAlignment="Left" Height="23" Margin="278,174,0,0" TextWrapping="Wrap" Text="{Binding Birthday}" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

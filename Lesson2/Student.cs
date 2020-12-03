@@ -25,6 +25,7 @@ namespace Lesson2
         private void CreateStudent_DoWork(object sender, DoWorkEventArgs e)
         {
             Thread.Sleep(500);
+            e.Result = this;
         }
 
         public int Average { get => average; set => average = value; }

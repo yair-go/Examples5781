@@ -24,6 +24,7 @@ namespace Lesson7
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ObservableCollection<Student> students2 = new ObservableCollection<Student>();
         private BindingList<Student> students = new BindingList<Student>();
         Student student;
         public MainWindow()
@@ -45,7 +46,7 @@ namespace Lesson7
 
         private void CreateStudentWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            StudentWindow studentWindow = new StudentWindow(student);
+            StudentWindow studentWindow = new StudentWindow(e.Result as Student);
             studentWindow.Closed += StudentWindow_Closed;
             studentWindow.Show();
         }
@@ -88,7 +89,7 @@ namespace Lesson7
 
         private void pbBindingStudent_Click(object sender, RoutedEventArgs e)
         {
-            new BindingStudentWindow(new Student("Avram")).Show();
+            new BindingStudentWindow(new Student("Yaakov",1990)).Show();
         }
 
         private void pbOneStudent_Click(object sender, RoutedEventArgs e)
